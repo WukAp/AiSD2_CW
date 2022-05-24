@@ -21,29 +21,18 @@ public:
 	~Node() {
 		next = nullptr;
 	}
-	/*
-	 * funcs allow you set new value to queue_el object properties
-	 */
 	void set_next(Node* const next_el) {
 		next = next_el;
 	};
 	void set_data(T new_data) {
 		data = new_data;
 	};
-
-	/*
-	 * funcs allow you get value of queue_el object properties
-	 */
 	Node* get_next() {
 		return next;
 	};
 	T get_data() {
 		return data;
 	};
-
-	/*
-	 * funcs set next/prev properties value to 'nullptr'
-	 */
 	void clr_next() {
 		delete this;
 		next = nullptr;
@@ -85,9 +74,6 @@ public:
 		return back;
 	}
 
-	/*
-	 * func adds element to queue
-	 */
 	void push(T data) {
 		temp = new Node<T>(data);
 		if (queue_size == 0) {
@@ -104,9 +90,6 @@ public:
 		queue_size++;
 	}
 
-	/*
-	 * func removes element from queue and returns its value
-	 */
 	T takeTop() {
 		if (queue_size == 0) {
 			throw std::out_of_range("The queue is empty");
@@ -129,9 +112,6 @@ public:
 		return front_data;
 	};
 
-	/*
-	 * func returns value of first queue element
-	 */
 	T getTop() {
 		if (queue_size == 0) {
 			throw  std::out_of_range("The queue is empty");
@@ -139,9 +119,6 @@ public:
 		return front->get_data();
 	}
 
-	/*
-	 * func returns queue size
-	 */
 	size_t get_size() {
 		return queue_size;
 	}
