@@ -1,0 +1,8 @@
+S O 4
+S P 5
+O P 6
+O Q 7
+P R 8
+Q R 9
+Q T 10
+R T 11

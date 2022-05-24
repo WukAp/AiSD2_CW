@@ -1,0 +1,8 @@
+S O 3
+S P 30
+O P 3
+O Q 3
+P R 3
+Q R 4
+Q T 20
+R T 3
